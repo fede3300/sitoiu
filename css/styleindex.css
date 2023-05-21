@@ -1,0 +1,153 @@
+body {
+    background-color: lightblue;
+}
+
+/* I need to change font size of navbar link */
+.navbar {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+a {
+    color: black !important;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+a:hover {
+    color: grey !important;
+}
+
+/*.canzoni {*/
+/*    font-family: 'Mitr', sans-serif;*/
+/*    font-weight: 300;*/
+/*    font-size: 13px;*/
+/*}*/
+
+.canzoni:hover {
+    color: white !important;
+}
+
+.myfont {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-family: 'Mitr', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+::placeholder {
+    font-family: 'Mitr', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.footer {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    padding-top: 100px;
+    /*padding-bottom: 30px;*/
+
+}
+
+.col {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.circle-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.btn-sm {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+.col {
+    font-family: 'Poppins', sans-serif;
+    font-style: bold italic;
+    font-weight: 600;
+    color: #091A5C;
+}
+
+.colfooter {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+.list-inline-item a {
+    opacity: 1;
+    transition: opacity 0.3s;
+    text-align: center !important;
+    text-decoration: none;
+}
+
+.list-inline-item a:hover {
+    opacity: 0.5;
+    text-align: center !important;
+}
+
+h5 {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 600;
+    color: #091A5C;
+}
+
+.sendus {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.fa-brands {
+    text-decoration: none;
+}
+
+.form-group {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+.fa-copyright {
+    padding-left: 5px;
+}
+
+.fa-folder-open {
+    padding-left: 3px;
+}
+
+.fa-facebook {
+    padding-left: 6px;
+}
+
+.no_underline {
+    text-decoration: none;
+}
+
+#btn-editor {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.fs-5 {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 600;
+    color: #091A5C;
+}
+
+.pagination {
+    padding-top: 35px;
+}
+
+.active {
+    font-weight: bold;
+}

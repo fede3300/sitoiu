@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SoundText</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font/Icon Import -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" width="36px">
+    <!--    <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,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">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9c62c5707d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,600&display=swap"
+          rel="stylesheet">
+    <!---------------------->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!---------------------->
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="stylesheet" href="css/background.css">
+</head>
+
+<body>
+
+<!------------------------------------------------ Background Canvas ------------------------------------------------>
+<canvas class="orb-canvas"></canvas>
+<!------------------------------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------- Navbar ---------------------------------------------------------->
+<nav class="navbar navbar-expand-lg shadow-5-strong">
+    <div class="container-fluid">
+        <div>
+            <a class="navbar-brand" href="landingpage.html">SoundText
+                <img src="imgs/SOUNDTEXT.png" alt="Bootstrap" width="40" height="40" style="padding-left: 0.5px">
+            </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span>
+                    <i class="fas fa-bars" style="color:#000; font-size:25px;"></i>
+                </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artisti.html">Artisti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="canzoni.html">Canzoni</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="soundtexter.html">Diventa un SoundTexter</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Canzone/artista"
+                       aria-label="Cerca la tua canzone">
+                <a href="canzoni.html" class="myfont btn btn-outline-dark">Cerca</a>
+
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------->
+
+<div class="container text-center justify-center">
+    <div class="row row-cols-2">
+
+        <!----------------------------- TOP CANZONI ------------------------------------>
+        <div class="col">Top canzoni maggio 2023
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="imgs/flowers.jpeg" alt="Immagine 1" class="circle-img">
+                        <a href="canzoni.html?song=Flowers&artist=Miley Cyrus&image=imgs/flowers.jpeg"
+                           class="canzoni btn btn-outline-dark btn-sm">Flowers - Miley Cyrus</a>
+                    </div>
+                    <div class="col">
+                        <img src="imgs/chemical.jpeg" alt="Immagine 2" class="circle-img">
+                        <a href="canzoni.html?song=Chemical&artist=Post Malone&image=imgs/chemical.jpeg"
+                           class="canzoni btn btn-outline-dark btn-sm">Chemical - Post Malone</a>
+                    </div>
+                    <div class="col">
+                        <img src="imgs/eyesclosed.png" alt="Immagine 3" class="circle-img">
+                        <a href="canzoni.html?song=Eyes Closed&artist=Ed Sheeran&image=imgs/eyesclosed.png"
+                           class="canzoni btn btn-outline-dark btn-sm">Eyes Closed - Ed Sheeran</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------------------------------------------------------------------->
+        <!----------------------------- TOP TRADOTTI ------------------------------------>
+
+        <div class="col">Testi tradotti più cercati
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="imgs/anotherlove.jpeg" alt="Immagine 1" class="circle-img">
+                        <a href="canzoni.html?song=Another Love&artist=Tom Odell&image=imgs/anotherlove.jpeg"
+                           class="canzoni btn btn-outline-dark btn-sm">Another Love - Tom Odell</a>
+                    </div>
+                    <div class="col">
+                        <img src="imgs/mockingbird.jpeg" alt="Immagine 2" class="circle-img">
+                        <a href="canzoni.html?song=Mockingbird&artist=Eminem&image=imgs/mockingbird.jpeg"
+                           class="canzoni btn btn-outline-dark btn-sm">Mockingbird - Eminem</a>
+                    </div>
+                    <div class="col">
+                        <img src="imgs/metallica.jpeg" alt="Immagine 3" class="circle-img">
+                        <a href="canzoni.html?song=Nothing Else Matters&artist=Metallica&image=imgs/metallica.jpeg"
+                           class="canzoni btn btn-outline-dark btn-sm">Nothing Else Matters - Metallica</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------->
+
+    <div class="container text-center justify-center">
+        <div class="row row-cols-2">
+            <!----------------------------- TOP ARTISTI ------------------------------------>
+
+            <div class="col">Top artisti maggio 2023
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col">
+                            <img src="imgs/miley.webp" alt="Immagine 1" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">Miley Cyrus</button>
+                        </div>
+                        <div class="col">
+                            <img src="imgs/edsheeran.jpeg" alt="Immagine 2" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">Ed Sheeran</button>
+                        </div>
+                        <div class="col">
+                            <img src="imgs/taylor.webp" alt="Immagine 3" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">Taylor Swift</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------------------------------------->
+            <!------------------------------------ TOP ALBUM ---------------------------------->
+
+            <div class="col">Top album 2023
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col">
+                            <img src="imgs/highlightsweekend.png" alt="Immagine 1" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">The Highlights - The
+                                Weeknd
+                            </button>
+                        </div>
+                        <div class="col">
+                            <img src="imgs/midnightstaylor.png" alt="Immagine 2" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">Midnights - Taylor Swift</button>
+                        </div>
+                        <div class="col">
+                            <img src="imgs/sos-sza.png" alt="Immagine 3" class="circle-img">
+                            <button type="button" class="btn btn-outline-dark btn-sm">SOS - SZA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------------------------------------------->
+
+        </div>
+    </div>
+</div>
+
+<footer class="footer text-white text-center" style="background-color: transparent;">
+    <div class="row align-items-end">
+        <div class="col-sm colfooter">
+                <span>Designed by Federica Signoriello
+                    <i class="fa-regular fa-copyright" style="color: #000000;"></i>
+                </span>
+        </div>
+        <div class="col-sm text-center">
+            <a class="no_underline" href="#">Documentazione</a>
+            <i class="fa-regular fa-folder-open" style="color: #000000;"></i>
+        </div>
+        <div class="col-sm text-center">
+            <a class="no_underline" href="#">Analytics</a>
+            <i class="fa-solid fa-chart-line" style="color: #000000;"></i>
+        </div>
+        <div class="col-sm text-center">
+            <a href="" class="mr-3"><i class="fa-brands fa-instagram fa-lg" style="color: #000000;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #000000;"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!------------------------------------------------ Javascript Canvas ------------------------------------------------>
+
+<script type="module">
+    import * as PIXI from "https://cdn.skypack.dev/pixi.js@5.x";
+    import {KawaseBlurFilter} from "https://cdn.skypack.dev/@pixi/filter-kawase-blur@3.2.0";
+    import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@3.0.0";
+    import hsl from "https://cdn.skypack.dev/hsl-to-hex";
+    import debounce from "https://cdn.skypack.dev/debounce";
+
+    // return a random number within a range
+    function random(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    // map a number from 1 range to another
+    function map(n, start1, end1, start2, end2) {
+        return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+    }
+
+    // Create a new simplex noise instance
+    const simplex = new SimplexNoise();
+
+    // ColorPalette class
+    class ColorPalette {
+        constructor() {
+            this.setColors();
+            this.setCustomProperties();
+        }
+
+        setColors() {
+            // pick a random hue somewhere between 220 and 360
+            this.hue = ~~random(220, 360);
+            this.complimentaryHue1 = this.hue + 30;
+            this.complimentaryHue2 = this.hue + 60;
+            // define a fixed saturation and lightness
+            this.saturation = 95;
+            this.lightness = 50;
+
+            // define a base color
+            this.baseColor = hsl(this.hue, this.saturation, this.lightness);
+            // define a complimentary color, 30 degress away from the base
+            this.complimentaryColor1 = hsl(
+                this.complimentaryHue1,
+                this.saturation,
+                this.lightness
+            );
+            // define a second complimentary color, 60 degrees away from the base
+            this.complimentaryColor2 = hsl(
+                this.complimentaryHue2,
+                this.saturation,
+                this.lightness
+            );
+
+            // store the color choices in an array so that a random one can be picked later
+            this.colorChoices = [
+                this.baseColor,
+                this.complimentaryColor1,
+                this.complimentaryColor2
+            ];
+        }
+
+        randomColor() {
+            // pick a random color
+            return this.colorChoices[~~random(0, this.colorChoices.length)].replace(
+                "#",
+                "0x"
+            );
+        }
+
+        setCustomProperties() {
+            // set CSS custom properties so that the colors defined here can be used throughout the UI
+            document.documentElement.style.setProperty("--hue", this.hue);
+            document.documentElement.style.setProperty(
+                "--hue-complimentary1",
+                this.complimentaryHue1
+            );
+            document.documentElement.style.setProperty(
+                "--hue-complimentary2",
+                this.complimentaryHue2
+            );
+        }
+    }
+
+    // Orb class
+    class Orb {
+        // Pixi takes hex colors as hexidecimal literals (0x rather than a string with '#')
+        constructor(fill = 0x000000) {
+            // bounds = the area an orb is "allowed" to move within
+            this.bounds = this.setBounds();
+            // initialise the orb's { x, y } values to a random point within it's bounds
+            this.x = random(this.bounds["x"].min, this.bounds["x"].max);
+            this.y = random(this.bounds["y"].min, this.bounds["y"].max);
+
+            // how large the orb is vs it's original radius (this will modulate over time)
+            this.scale = 1;
+
+            // what color is the orb?
+            this.fill = fill;
+
+            // the original radius of the orb, set relative to window height
+            this.radius = random(window.innerHeight / 6, window.innerHeight / 3);
+
+            // starting points in "time" for the noise/self similar random values
+            this.xOff = random(0, 1000);
+            this.yOff = random(0, 1000);
+            // how quickly the noise/self similar random values step through time
+            this.inc = 0.002;
+
+            // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
+            this.graphics = new PIXI.Graphics();
+            this.graphics.alpha = 0.825;
+
+            // 250ms after the last window resize event, recalculate orb positions.
+            window.addEventListener(
+                "resize",
+                debounce(() => {
+                    this.bounds = this.setBounds();
+                }, 250)
+            );
+        }
+
+        setBounds() {
+            // how far from the { x, y } origin can each orb move
+            const maxDist =
+                window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
+            // the { x, y } origin for each orb (the bottom right of the screen)
+            const originX = window.innerWidth / 1.25;
+            const originY =
+                window.innerWidth < 1000
+                    ? window.innerHeight
+                    : window.innerHeight / 1.375;
+
+            // allow each orb to move x distance away from it's x / y origin
+            return {
+                x: {
+                    min: originX - maxDist,
+                    max: originX + maxDist
+                },
+                y: {
+                    min: originY - maxDist,
+                    max: originY + maxDist
+                }
+            };
+        }
+
+        update() {
+            // self similar "psuedo-random" or noise values at a given point in "time"
+            const xNoise = simplex.noise2D(this.xOff, this.xOff);
+            const yNoise = simplex.noise2D(this.yOff, this.yOff);
+            const scaleNoise = simplex.noise2D(this.xOff, this.yOff);
+
+            // map the xNoise/yNoise values (between -1 and 1) to a point within the orb's bounds
+            this.x = map(xNoise, -1, 1, this.bounds["x"].min, this.bounds["x"].max);
+            this.y = map(yNoise, -1, 1, this.bounds["y"].min, this.bounds["y"].max);
+            // map scaleNoise (between -1 and 1) to a scale value somewhere between half of the orb's original size, and 100% of it's original size
+            this.scale = map(scaleNoise, -1, 1, 0.5, 1);
+
+            // step through "time"
+            this.xOff += this.inc;
+            this.yOff += this.inc;
+        }
+
+        render() {
+            // update the PIXI.Graphics position and scale values
+            this.graphics.x = this.x;
+            this.graphics.y = this.y;
+            this.graphics.scale.set(this.scale);
+
+            // clear anything currently drawn to graphics
+            this.graphics.clear();
+
+            // tell graphics to fill any shapes drawn after this with the orb's fill color
+            this.graphics.beginFill(this.fill);
+            // draw a circle at { 0, 0 } with it's size set by this.radius
+            this.graphics.drawCircle(0, 0, this.radius);
+            // let graphics know we won't be filling in any more shapes
+            this.graphics.endFill();
+        }
+    }
+
+    // Create PixiJS app
+    const app = new PIXI.Application({
+        // render to <canvas class="orb-canvas"></canvas>
+        view: document.querySelector(".orb-canvas"),
+        // auto adjust size to fit the current window
+        resizeTo: window,
+        // transparent background, we will be creating a gradient background later using CSS
+        transparent: true
+    });
+
+    app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
+
+    // Create colour palette
+    const colorPalette = new ColorPalette();
+
+    // Create orbs
+    const orbs = [];
+
+    for (let i = 0; i < 10; i++) {
+        const orb = new Orb(colorPalette.randomColor());
+
+        app.stage.addChild(orb.graphics);
+
+        orbs.push(orb);
+    }
+
+    // Animate!
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        app.ticker.add(() => {
+            orbs.forEach((orb) => {
+                orb.update();
+                orb.render();
+            });
+        });
+    } else {
+        orbs.forEach((orb) => {
+            orb.update();
+            orb.render();
+        });
+    }
+
+</script>
+
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+</body>
+
+</html>
